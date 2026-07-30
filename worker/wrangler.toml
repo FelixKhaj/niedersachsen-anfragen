@@ -1,0 +1,6 @@
+name = "niedersachsen-anfragen-api"
+main = "src/index.js"
+compatibility_date = "2026-07-01"
+
+[vars]
+DATA_URL = "https://raw.githubusercontent.com/DEIN_GITHUB_NAME/niedersachsen-anfragen/main/data/documents.json"

@@ -1,0 +1,60 @@
+openapi: 3.1.0
+info:
+  title: Niedersachsen-Anfragen-Suche
+  version: 1.0.0
+  description: Durchsucht Antworten der Niedersächsischen Landesregierung.
+servers:
+  - url: https://DEIN-WORKER.DEIN-SUBDOMAIN.workers.dev
+paths:
+  /search:
+    get:
+      operationId: searchGovernmentAnswers
+      summary: Antworten der Landesregierung durchsuchen
+      description: Sucht nach Wörtern in Titel, Metadaten und PDF-Volltext.
+      parameters:
+        - name: q
+          in: query
+          required: true
+          description: Konkrete Suchbegriffe, möglichst zwei bis fünf Wörter.
+          schema:
+            type: string
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+            minimum: 1
+            maximum: 20
+            default: 10
+      responses:
+        "200":
+          description: Suchergebnisse
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  query:
+                    type: string
+                  count:
+                    type: integer
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        drucksache:
+                          type: string
+                        title:
+                          type: string
+                        ministerium:
+                          type: [string, "null"]
+                        antwortdatum:
+                          type: [string, "null"]
+                        anfragende:
+                          type: [string, "null"]
+                        excerpt:
+                          type: string
+                        pdf_url:
+                          type: string
+                          format: uri
