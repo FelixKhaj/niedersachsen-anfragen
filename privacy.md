@@ -5,7 +5,7 @@ Stand: 30. Juli 2026
 ## Verantwortlicher
 
 Felix Khaj  
-Kontakt: post@felixklabe.de
+Kontakt: foniks987@gmail.com
 
 ## Zweck des Dienstes
 
