@@ -5,7 +5,7 @@ Stand: 30. Juli 2026
 ## Verantwortlicher
 
 Felix Khaj  
-Kontakt: DEINE-E-MAIL-ADRESSE
+Kontakt: post@felixklabe.de
 
 ## Zweck des Dienstes
 
